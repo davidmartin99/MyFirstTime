@@ -20,14 +20,18 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyFirstTimeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "David!",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+
+                    val modifer = Modifier.padding(innerPadding)
+                    GreetingB()
                 }
             }
         }
     }
+}
+// nueva funcion
+@Composable
+fun GreetingB() {
+    Greeting("\nDavid!")
 }
 
 @Composable
